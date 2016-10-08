@@ -1,0 +1,4 @@
+".\Objects\STARTUP.obj",
+".\Objects\main.obj" 
+TO ".\Objects\8051 Master" 
+PRINT(".\Listings\8051 Master.m51") RAMSIZE(256) 
