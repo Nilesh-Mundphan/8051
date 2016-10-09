@@ -1,4 +1,8 @@
 ".\Objects\STARTUP.obj",
+".\Objects\delay.obj",
+".\Objects\gpio.obj",
+".\Objects\serial.obj",
+".\Objects\lcd.obj",
 ".\Objects\main.obj" 
 TO ".\Objects\8051 Master" 
 PRINT(".\Listings\8051 Master.m51") RAMSIZE(256) 

@@ -1,0 +1,48 @@
+C51 COMPILER V9.56.0.0   DELAY                                                             10/09/2016 13:02:06 PAGE 1   
+
+
+C51 COMPILER V9.56.0.0, COMPILATION OF MODULE DELAY
+OBJECT MODULE PLACED IN .\Objects\delay.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE lib\delay.c OPTIMIZE(8,SPEED) BROWSE INCDIR(.\lib;.\modules) DEBUG OBJEC
+                    -TEXTEND PRINT(.\Listings\delay.lst) TABS(2) OBJECT(.\Objects\delay.obj)
+
+line level    source
+
+   1          #include <REGX51.H>
+   2          #include <intrins.h>
+   3          #include "delay.h"
+   4          
+   5          void delay_us(unsigned int cnt)
+   6          {
+   7   1        while(cnt)
+   8   1        {
+   9   2          _nop_();
+  10   2          cnt--;
+  11   2        }
+  12   1      }
+  13          
+  14          void delay_ms(unsigned int count) 
+  15          {   
+  16   1        unsigned int i;         // Keil v7.5a 
+  17   1        while(count)
+  18   1        {
+  19   2          i = 115;       // 115 exact value
+  20   2          while(i>0) 
+  21   2          i--;
+  22   2        count--;
+  23   2        }
+  24   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     38    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
